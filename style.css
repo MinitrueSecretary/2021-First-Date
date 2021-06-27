@@ -1,35 +1,93 @@
+html{
+    height: 100%;
+}
 body{
     font-family: 'Mitr Light', 'TH Sarabun New','Angsana New';
-    text-align: center;
     padding: 0;
     margin: 0;
-    background-color: lightpink;
+    box-sizing: border-box;
+    height:100%;
 }
+.column {
+    float: left;
+  }
+
+.row {
+    height:100%;
+}
+.left {
+    padding-top: 50px;
+    width: 60%;
+    background-color:#aaa;
+    min-height: 100%;
+  }
+  
+.right {
+    width: 40%;
+    background-color:#E3E0CA;
+    min-height: 100%;
+    text-align: center;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
 h1{
+    text-align: center;
     font-size: 50px;
-    background-color:hotpink;
-    margin-block-start: 0;
+    color:#e782a2;
+}
+
+.index-content{
+    padding-right: 30px;
+    text-align: right;
+}
+h2{
+    font-size: 40px;
+    color:#AB76CC ;
 }
 
 p{
     font-size: 22px;
 }
+a{
+    font-size: 22px;
+}
+
+
 
 input{
-    width: 70%;
-    font-size: 40px;
+    width: 50%;
+    font-size: 30px;
     text-align: center;
     font-family: 'Mitr Light', 'TH Sarabun New','Angsana New';
 }
 
 #submit-button {
-    font-family: 'Mitr Light', 'TH Sarabun New','Angsana New';
-    background-color: magenta;
-    font-size: 35px;
-    padding: 5px 50px;
-    color: lightgrey;
-    border: 3px solid white;
-    border-radius: 10px;
+    margin-top: 30px;
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.3));
+    /* Rectangle 3 */
+    background: #5DD0AB;
+    border-radius: 30px;
+    /* Submit */
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 30px;
+    line-height: 56px;
+    align-items: center;
+
+    color: #DFFEFD;
+
+
   }
 
 #submit-button:hover{
