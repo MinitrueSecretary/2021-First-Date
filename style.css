@@ -2,7 +2,7 @@ html{
     height: 100%;
 }
 body{
-    font-family: 'Mitr Light', 'TH Sarabun New','Angsana New';
+    font-family: 'Roboto','Mitr Light','Angsana New';
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -23,6 +23,7 @@ body{
   }
   
 .right {
+    padding-top: 50px;
     width: 50%;
     background-color:#E3E0CA;
     min-height: 100%;
@@ -42,17 +43,18 @@ body{
     }
   }
 h1{
+    font-family: 'Cairo','Roboto','Mitr Light','Angsana New';
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
     color:#e782a2;
 }
 
 .index-content{
-    padding-right: 30px;
+    padding-right: 50px;
     text-align: right;
 }
 h2{
-    font-size: 40px;
+    font-size: 36px;
     color:#AB76CC ;
 }
 
@@ -68,8 +70,9 @@ a{
 input{
     width: 50%;
     font-size: 30px;
+
     text-align: center;
-    font-family: 'Mitr Light', 'TH Sarabun New','Angsana New';
+    font-family: 'Roboto','Mitr Light','Angsana New';
 }
 
 #submit-button {
@@ -87,18 +90,8 @@ input{
 
     color: #DFFEFD;
 
-
   }
 
 #submit-button:hover{
     box-shadow: 0px 0px 20px 10px turquoise;
-}
-
-#info {
-    text-align: left;
-    max-height: 0;
-}
-
-#info .open{
-    max-height: 400;
 }
