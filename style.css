@@ -17,13 +17,13 @@ body{
 }
 .left {
     padding-top: 50px;
-    width: 60%;
-    background-color:#aaa;
+    width: 50%;
+    background:url(img/white-paper-texture.jpg);
     min-height: 100%;
   }
   
 .right {
-    width: 40%;
+    width: 50%;
     background-color:#E3E0CA;
     min-height: 100%;
     text-align: center;
