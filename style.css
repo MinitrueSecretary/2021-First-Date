@@ -1,97 +1,102 @@
 html{
-    height: 100%;
+  height: 100%;
 }
 body{
-    font-family: 'Roboto','Mitr Light','Angsana New';
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    height:100%;
+  font-family: 'Roboto','Mitr Light','Angsana New';
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height:100%;
 }
 .column {
-    float: left;
-  }
+  float: left;
+}
 
 .row {
-    height:100%;
+  height:100%;
 }
 .left {
-    padding-top: 50px;
-    width: 50%;
-    background:url(img/white-paper-texture.jpg);
-    min-height: 100%;
-  }
-  
+  padding-top: 50px;
+  width: 50%;
+  background:url(img/white-paper-texture.jpg);
+  min-height: 100%;
+}
+
 .right {
-    padding-top: 50px;
-    width: 50%;
-    background-color:#E3E0CA;
-    min-height: 100%;
-    text-align: center;
-  }
+  padding-top: 50px;
+  width: 50%;
+  background-color:#E3E0CA;
+  min-height: 100%;
+  text-align: center;
+}
 
 /* Clear floats after the columns */
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  content: "";
+  display: table;
+  clear: both;
+}
 
 @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
+  .column {
+    width: 100%;
   }
+}
 h1{
-    font-family: 'Cairo','Roboto','Mitr Light','Angsana New';
-    text-align: center;
-    font-size: 60px;
-    color:#e782a2;
+  font-family: 'Cairo','Roboto','Mitr Light','Angsana New';
+  text-align: center;
+  font-size: 60px;
+  color:#e782a2;
 }
 
 .index-content{
-    padding-right: 50px;
-    text-align: right;
+  padding-right: 50px;
+  text-align: right;
 }
 h2{
-    font-size: 36px;
-    color:#AB76CC ;
+  font-size: 36px;
+  color:#AB76CC ;
 }
 
 p{
-    font-size: 22px;
+  font-size: 22px;
 }
 a{
-    font-size: 22px;
+  font-size: 22px;
 }
 
+label{
+  color: #AB76CC;
+  font-size: 30px;
 
+}
 
 input{
-    width: 50%;
-    font-size: 30px;
-
-    text-align: center;
-    font-family: 'Roboto','Mitr Light','Angsana New';
+  font-family: 'Roboto','Mitr Light','Angsana New';
+  width: 50%;
+  font-size: 30px;
+  color: #AB76CC;
+  text-align: center;
 }
 
 #submit-button {
-    margin-top: 30px;
-    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.3));
-    /* Rectangle 3 */
-    background: #5DD0AB;
-    border-radius: 30px;
-    /* Submit */
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 30px;
-    line-height: 56px;
-    align-items: center;
+  margin-top: 30px;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.3));
+  /* Rectangle 3 */
+  background: #5DD0AB;
+  border-radius: 30px;
+  /* Submit */
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 30px;
+  line-height: 56px;
+  align-items: center;
 
-    color: #DFFEFD;
+  color: #DFFEFD;
 
-  }
-
-#submit-button:hover{
-    box-shadow: 0px 0px 20px 10px turquoise;
 }
+/*
+#submit-button:hover{
+  box-shadow: 0px 0px 20px 10px turquoise;
+}
+*/
