@@ -1,0 +1,80 @@
+body{
+    font-family: 'Roboto','Mitr Light','Angsana New';
+    padding: 0;
+    margin-top: 0;
+    align-content: center;
+
+    background: url(img/firstdate\ background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#top-paper {
+    background: url(img/white-paper-texture.jpg);
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding-bottom: 50px ;
+    
+}
+
+#top-paper-content{
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: left;
+}
+
+h1{
+    font-family: 'Cairo','Roboto','Mitr Light','Angsana New';
+    text-align: center;
+    font-size: 60px;
+    color:#e782a2;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+p{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+span{
+    color: #A9361B;
+    font-size: 45px;
+}
+
+.left-align{
+    text-align: left;
+}
+
+#bottom-paper{
+    background: url(img/white-paper-texture.jpg);
+    max-width: 680px;
+
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+#bottom-paper h2{
+    text-align: center;
+    color: crimson;
+}
+#bottom-paper p{
+    font-size: 16px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+  }
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
