@@ -15,6 +15,7 @@ body{
   float: left;
 }
 
+
 .row {
   height:100%;
 }
@@ -50,11 +51,17 @@ h1{
   text-align: center;
   font-size: 60px;
   color:#e782a2;
+  line-height: 120%;
+
 }
 
 .index-content{
   padding-right: 50px;
   text-align: right;
+}
+.notfound-content{
+  padding-left: 50px;
+  text-align: left;
 }
 h2{
   font-size: 36px;
@@ -71,7 +78,25 @@ a{
 label{
   color: #AB76CC;
   font-size: 30px;
+}
 
+.violet-text{
+  color: #AB76CC;
+}
+.red-text{
+  color: crimson;
+}
+
+#contact{
+  padding-left: 30px;
+  padding-top: 100px;
+}
+#contact p{
+  font-size: 16px;
+  line-height: 100%;
+}
+#contact .column{
+  width: 33.33%;
 }
 
 input{
