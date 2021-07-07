@@ -9,27 +9,54 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+const newIntanias = db.collection("newIntanias");
 
-var studentID;
-var phoneNumber;
+var studentID = '';
+var phoneNumber = '';
+var no;
+var zoomName;
+var meetingRound;
 
 function indexFunction(){
     var button = document.getElementById("submit-button");
-    
-
     button.onclick = function(){
-        alert("hello");
-        window.location.href = "./notfound.html";
-    } 
-/*
-    button.onclick = function(){
-        studentID = document.getElementById("student-id").value;
-        phoneNumber = document.getElementById("phone-no").value;
-        console.log("Clicked!");
+        studentID = document.getElementById("student-id").value.trim();
+        phoneNumber = document.getElementById("phone-no").value.trim();
         console.log("SID is " + studentID);
         console.log("Phone no is " + phoneNumber);
-    }
-*/
+        var isFound = findAndCheckID(studentID,phoneNumber);
+
+        
+        // window.location.href = "./notfound.html";
+       
+    } 
+
 
 }
+
+async function findAndCheckID(studentID,phoneNumber){
+    const snapshot = await newIntanias.where('student-id','==',studentID).get();
+    console.log(snapshot);
+    if (snapshot.empty) {
+        console.log('No matching documents.');
+        window.location.href = "./notfound.html";
+        return false;
+    } 
+    snapshot.forEach(doc => {
+        var trueNumber = doc.get('phone-no');
+        if(trueNumber == phoneNumber){
+           no = doc.get('no');
+           zoomName = doc.get('zoom-name');
+           meetingRound = doc.get('meeting-round');
+           console.log(no,zoomName,meetingRound)
+           window.location.href = "./showinfo.html";
+           return true;
+        }
+        window.location.href = "./notfound.html";
+        return false;
+      });
+}
+
+
 
