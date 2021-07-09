@@ -2,6 +2,7 @@ body{
     font-family: 'Roboto','Mitr Light','Angsana New';
     padding: 0;
     margin-top: 0;
+    margin-bottom: 0;
     align-content: center;
 
     background: url(img/firstdate\ background.png);
@@ -41,10 +42,20 @@ p{
     margin-bottom: 10px;
 }
 
-span{
+#no {
     color: #A9361B;
     font-size: 45px;
+    font-weight: bold;
 }
+#zoom-name{
+    color: #C27461;
+}
+#meeting-day, #meeting-time{
+    color: #fbba0d;
+    font-size: 35px;
+    font-weight: bold;
+}
+
 
 .left-align{
     text-align: left;

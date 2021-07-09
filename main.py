@@ -19,6 +19,7 @@ for index,row in excel_sheet.iterrows():
     dataToAdd['no'] = str(row['no'])
     dataToAdd['zoom-name'] = str(row['zoom-name'])
     dataToAdd['meeting-round'] = int(row['meeting-round'])
-    doc_ref.add(dataToAdd.copy())
+    
+    doc_ref.document(str(row['student-id'])).set(dataToAdd)
 
 print('added successfully')
