@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
 html{
   height: 100%;
 }
 
 
 body{
-  font-family: 'Roboto','sans-serif','Angsana New';
+  font-family: 'Roboto','Kanit','sans-serif','Angsana New';
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -47,7 +48,7 @@ body{
   }
 }
 h1{
-  font-family: 'Cairo',sans-serif,'Angsana New';
+  font-family: 'Cairo','Kanit',sans-serif,'Angsana New';
   text-align: center;
   font-size: 60px;
   color:#e782a2;
@@ -66,6 +67,7 @@ h1{
 h2{
   font-size: 36px;
   color:#AB76CC ;
+  font-weight: 600;
 }
 
 p{
@@ -100,7 +102,7 @@ label{
 }
 
 input{
-  font-family: 'Roboto','Mitr Light','Verdana','Microsoft Sans Serif','Angsana New';
+  font-family: 'Roboto','Kanit',sans-serif,'Angsana New';
   width: 50%;
   font-size: 30px;
   color: #AB76CC;

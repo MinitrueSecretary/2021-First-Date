@@ -62,14 +62,14 @@ async function findAndCheckID(studentID,phoneNumber){
         var trueNumber = doc.get('phone-no');
         if(trueNumber == phoneNumber){
            no = doc.get('no');
-           zoomName = doc.get('zoom-name');
+           //zoomName = doc.get('zoom-name');
            meetingRound = doc.get('meeting-round');
 
            sessionStorage.setItem("no", no);
-           sessionStorage.setItem("zoom-name", zoomName);
+           //sessionStorage.setItem("zoom-name", zoomName);
            sessionStorage.setItem("meeting-round", meetingRound);
 
-           console.log(no,zoomName,meetingRound)
+           //console.log(no,zoomName,meetingRound)
            window.location.href = "./showinfo.html";
            return true;
         }
@@ -83,12 +83,14 @@ function writeDetail(){
     var studentIDOut = document.getElementById('student-id');
     var phoneNumberOut = document.getElementById('phone-no');
     var zoomNameOut = document.getElementById('zoom-name');
+    var meetingRoundOut = document.getElementById('meeting-round');
     
     
     noOut.innerHTML = sessionStorage.getItem("no");
     studentIDOut.innerHTML += sessionStorage.getItem("student-id");
     phoneNumberOut.innerHTML += sessionStorage.getItem("phone-no");
-    zoomNameOut.innerHTML += sessionStorage.getItem("zoom-name");
+    zoomNameOut.innerHTML += sessionStorage.getItem("no") + "_ชื่อเล่น";
+    meetingRoundOut.innerHTML = sessionStorage.getItem("meeting-round");
     writeZoomDetails(sessionStorage.getItem("meeting-round"));
 }
 
@@ -101,8 +103,8 @@ async function writeZoomDetails(meetingRound){
 
     const doc = await meetingRounds.doc(meetingRound).get();
     //console.log(getNumberNames(meetingRound));
-    console.log(doc.data());
-    console.log(doc.get('time'));
+    //console.log(doc.data());
+    //console.log(doc.get('time'));
     meetingDayOut.innerHTML = doc.get('day');
     meetingTimeOut.innerHTML += doc.get('time');
     var link = doc.get('link');
