@@ -51,31 +51,29 @@ function notfoundFunction(){
 }
 
 async function findAndCheckID(studentID,phoneNumber){
-    const snapshot = await newIntanias.where('student-id','==',studentID).get();
-    console.log(snapshot);
-    if (snapshot.empty) {
+    const snapshot = await newIntanias.doc(studentID).get();
+    console.log(snapshot.exists);
+    if (!snapshot.exists) {
         console.log('No matching documents.');
-        window.location.href = "./notfound.html";
+        //window.location.href = "./notfound.html";
         return false;
     } 
-    snapshot.forEach(doc => {
-        var trueNumber = doc.get('phone-no');
-        if(trueNumber == phoneNumber){
-           no = doc.get('no');
-           //zoomName = doc.get('zoom-name');
-           meetingRound = doc.get('meeting-round');
+    var trueNumber = snapshot.get('phone-no');
+    if(trueNumber == phoneNumber){
+        no = snapshot.get('no');
+        meetingRound = snapshot.get('meeting-round');
 
-           sessionStorage.setItem("no", no);
-           //sessionStorage.setItem("zoom-name", zoomName);
-           sessionStorage.setItem("meeting-round", meetingRound);
+        sessionStorage.setItem("no", no);
+        sessionStorage.setItem("meeting-round", meetingRound);
 
-           //console.log(no,zoomName,meetingRound)
-           window.location.href = "./showinfo.html";
-           return true;
-        }
-        window.location.href = "./notfound.html";
-        return false;
-      });
+        //console.log(no,zoomName,meetingRound)
+        window.location.href = "./showinfo.html";
+        return true;
+     }
+
+     window.location.href = "./notfound.html";
+     return false;
+
 }
 
 function writeDetail(){

@@ -1,4 +1,5 @@
-
+.firebase/
+.github/
 TestMail.py
 firstdate2021-64031-firebase-adminsdk-1eh03-2c23736318.json
 ServiceAccountKey.json
