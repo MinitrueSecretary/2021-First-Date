@@ -51,12 +51,11 @@ function notfoundFunction(){
 }
 
 async function findAndCheckID(studentID,phoneNumber){
-    //const snapshot = await newIntanias.where('student-id','==',studentID).get();
     const snapshot = await newIntanias.doc(studentID).get();
     console.log(snapshot.exists);
     if (!snapshot.exists) {
         console.log('No matching documents.');
-        window.location.href = "./notfound.html";
+        //window.location.href = "./notfound.html";
         return false;
     } 
     var trueNumber = snapshot.get('phone-no');
@@ -74,25 +73,7 @@ async function findAndCheckID(studentID,phoneNumber){
 
      window.location.href = "./notfound.html";
      return false;
-    /*snapshot.forEach(doc => {
-       
-        if(trueNumber == phoneNumber){
-           no = doc.get('no');
 
-           //zoomName = doc.get('zoom-name');
-           meetingRound = doc.get('meeting-round');
-
-           sessionStorage.setItem("no", no);
-           //sessionStorage.setItem("zoom-name", zoomName);
-           sessionStorage.setItem("meeting-round", meetingRound);
-
-           //console.log(no,zoomName,meetingRound)
-           window.location.href = "./showinfo.html";
-           return true;
-        }
-        window.location.href = "./notfound.html";
-        return false;
-      });*/
 }
 
 function writeDetail(){
